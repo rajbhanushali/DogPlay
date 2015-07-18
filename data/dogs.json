@@ -1,4 +1,4 @@
-dogs = '[
+dogs = [
 {"name": "Kaya", "address": "506 Adriatic Ct", "breed": "German Shepherd", "imgURL": "http://goo.gl/2gj0mo"},
 {"name": "Goldi", "address": "212 Melbrooke St", "breed": "Golden Retriever", "imgURL": "https://goo.gl/3nB2mN"},
 {"name": "Cotton", "address": "2649 Harpix Circle", "breed": "Spanish Poodle", "imgURL": "http://goo.gl/flHdC6"},
@@ -11,5 +11,5 @@ dogs = '[
 {"name": "Junior", "address": "138 Parle Road", "breed": "Chihuahua", "imgURL": "https://goo.gl/Vdlt2c"},
 {"name": "Franky", "address": "738 Sagar St", "breed": "Shitsu", "imgURL": "http://bit.ly/1Su0A1q"},
 {"name": "Woofers", "address": "438 Sonia Road", "breed": "Boston Terrier", "imgURL": "http://goo.gl/P9wWAl"},
-{"name": "Leo", "address": "298 Gandhi Road", "breed": "Spitz", "imgURL": "https://goo.gl/Vdlt2c"},
-]';
+{"name": "Leo", "address": "298 Gandhi Road", "breed": "Spitz", "imgURL": "https://goo.gl/Vdlt2c"}
+];

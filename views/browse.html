@@ -1,54 +1,14 @@
 <div class='wrapper'>
 <div class="listview" style="float: left;width:30%">
-  <ul>
+  <ul ng-repeat= 'dog in dogs'>
     <li>
-      <img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/48/48f5d5c43cae4542a27929dbff3f4dd713fdb35b_full.jpg" height=100px width=100px>
-      <h3>Kaya</h3>
-      <p><strong>Address: </strong>506 Adriatic Court</p>
-      <p><strong>Breed: </strong> German Shepherd</p>
+      <img ng-src="{{dog.IMGURL}}" height=100px width=100px>
+      <h3>{{dog.NAME}}</h3>
+      <p><strong>Address: </strong>{{dog.ADDRESS}}</p>
+      <p><strong>Breed: </strong> {{dog.BREED}}</p>
     </li>
 
-    <li>
-      <img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/48/48f5d5c43cae4542a27929dbff3f4dd713fdb35b_full.jpg" height=100px width=100px>
-      <h3>Kaya</h3>
-      <p><strong>Address: </strong>506 Adriatic Court</p>
-      <p><strong>Breed: </strong> German Shepherd</p>
-    </li>
-
-    <li>
-      <img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/48/48f5d5c43cae4542a27929dbff3f4dd713fdb35b_full.jpg" height=100px width=100px>
-      <h3>Kaya</h3>
-      <p><strong>Address: </strong>506 Adriatic Court</p>
-      <p><strong>Breed: </strong> German Shepherd</p>
-    </li>
-
-    <li>
-      <img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/48/48f5d5c43cae4542a27929dbff3f4dd713fdb35b_full.jpg" height=100px width=100px>
-      <h3>Kaya</h3>
-      <p><strong>Address: </strong>506 Adriatic Court</p>
-      <p><strong>Breed: </strong> German Shepherd</p>
-    </li>
-
-    <li>
-      <img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/48/48f5d5c43cae4542a27929dbff3f4dd713fdb35b_full.jpg" height=100px width=100px>
-      <h3>Kaya</h3>
-      <p><strong>Address: </strong>506 Adriatic Court</p>
-      <p><strong>Breed: </strong> German Shepherd</p>
-    </li>
-
-    <li>
-      <img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/48/48f5d5c43cae4542a27929dbff3f4dd713fdb35b_full.jpg" height=100px width=100px>
-      <h3>Kaya</h3>
-      <p><strong>Address: </strong>506 Adriatic Court</p>
-      <p><strong>Breed: </strong> German Shepherd</p>
-    </li>
-
-    <li>
-      <img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/48/48f5d5c43cae4542a27929dbff3f4dd713fdb35b_full.jpg" height=100px width=100px>
-      <h3>Kaya</h3>
-      <p><strong>Address: </strong>506 Adriatic Court</p>
-      <p><strong>Breed: </strong> German Shepherd</p>
-    </li>
+    
   </ul>
 </div>
 </div>
