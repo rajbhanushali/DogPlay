@@ -2,8 +2,9 @@
  * Created by kbhanush on 5/12/15.
  */
 
-var oracledb = require('oracledb');
 var dbConfig = require('../dbconfig.js');
+var oracledb = require('oracledb');
+
 
 /* API for creating new item, finding item by id and all items */
  
@@ -11,7 +12,7 @@ var dbConfig = require('../dbconfig.js');
 
 /*-------------------------------------------New item ----------------------------*/
 
-app.post('/item', function(req,res, next) {
+app.post('/dog', function(req,res, next) {
 
 
 oracledb.getConnection(
@@ -35,7 +36,7 @@ console.log('Recd from client','title:',req.body.p1, 'desc:',req.body.p2, 'By:',
 
 
     connection.execute(
-      'INSERT INTO items (item_title,item_desc,item_posted_by,item_status,item_price) ' +
+      'INSERT INTO dogs (name,address,city,breed, imgurl) ' +
       'values (:p1,:p2,:p3,:p4,:p5) ',
       
       {p1:req.body.p1, p2:req.body.p2, p3:req.body.p3, 
@@ -53,12 +54,9 @@ console.log('Recd from client','title:',req.body.p1, 'desc:',req.body.p2, 'By:',
 
             console.log('rows inserted',status.rowsAffected);
             connection.execute(
-        'select ITEMS.item_ID, ITEMS.item_TITLE, ITEMS.item_DESC,ITEMS.item_POST_DATE, ' +
-        'ITEMS.item_posted_by,ITEMS.item_bought_by,USERS.USER_GRAVATAR,ITEMS.item_PRICE, ' +
-        'ITEMS.item_STATUS from ITEMS, USERS where ITEMS.item_posted_by = USERS.USER_ID ' +
-         'and items.item_title = :t1 and items.item_posted_by = :t2',
+        'select * from dogs where name = :t1 and address = :t2',
               
-              {t1:req.body.p1, t2:req.body.p3},
+              {t1:req.body.p1, t2:req.body.p2},
               
               {outFormat: oracledb.OBJECT},
 
@@ -86,8 +84,8 @@ console.log('Recd from client','title:',req.body.p1, 'desc:',req.body.p2, 'By:',
 
 
 //--------------start getAll items ---------------------
-  app.get('/item', function(req,res, next) {
-  console.log('getAllitems API called');
+  app.get('/dogs', function(req,res, next) {
+  console.log('getAlldogs API called');
 
   /*save new item in mongo */
 
@@ -105,9 +103,7 @@ console.log('Recd from client','title:',req.body.p1, 'desc:',req.body.p2, 'By:',
       }
       connection.execute(
 
-        'select ITEMS.item_ID, ITEMS.item_TITLE, ITEMS.item_DESC,ITEMS.item_POST_DATE, ' +
-        'ITEMS.item_posted_by,ITEMS.item_bought_by,USERS.USER_GRAVATAR,ITEMS.item_bought_by,ITEMS.item_PRICE, ' +
-        'ITEMS.item_STATUS from ITEMS, USERS where ITEMS.item_posted_by = USERS.USER_ID',
+        'select * from dogs',
         
         {},
         {outFormat: oracledb.OBJECT},
