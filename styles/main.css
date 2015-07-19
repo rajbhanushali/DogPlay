@@ -6,37 +6,34 @@
 }
 
 .listview {
-  margin: 10px;
-  height: 87vh;
-  width: 31vw;
   overflow: scroll;
-  padding-right: 30em;
+
 }
 
-ul {
+.listview ul {
   list-style-type: none;
   width: 500px;
 }
 
-h3 {
+.listview h3 {
   font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
 }
 
-li img {
+.listview li img {
   float: left;
   margin: 0 15px 0 0;
 }
 
-li p {
+.listview li p {
   font: 200 12px/1.5 Georgia, Times New Roman, serif;
 }
 
-li {
+.listview li {
   padding: 10px;
   overflow: auto;
 }
 
-li:hover {
+.listview li:hover {
   background: #A0A0A0;
   cursor: pointer;
 }
@@ -46,7 +43,8 @@ li:hover {
 }
 
 .logo{
-  margin-top: 11px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 body{
@@ -55,8 +53,36 @@ body{
 
 .angular-google-map-container
 {
-  height: 87vh;
-  width: 67vw;
-  margin-right: 1vw;
-  float: right;
+ 
+}
+
+@media (min-width: 1375px){
+  .listview{
+    float: left;
+    margin: 10px;
+    height: 87vh;
+    width: 31vw;
+    width: 30%;
+  }
+  .angular-google-map-container{
+    float: right;
+    height: 87vh;
+    width: 67vw;
+    margin-right: 1vw;
+  }
+}
+
+@media(max-width: 1374px){
+  .listview{
+    margin: 10px;
+    height: 45vh;
+    width: 100%;
+    overflow: scroll;
+  }
+  .angular-google-map-container{
+    height: 50vh;
+    width: 100%;
+    margin-right: 1vw;
+  }
+
 }
