@@ -1,15 +1,108 @@
-dogs = [
-{"name": "Kaya", "address": "506 Adriatic Ct", "breed": "German Shepherd", "imgURL": "http://goo.gl/2gj0mo"},
-{"name": "Goldi", "address": "212 Melbrooke St", "breed": "Golden Retriever", "imgURL": "https://goo.gl/3nB2mN"},
-{"name": "Cotton", "address": "2649 Harpix Circle", "breed": "Spanish Poodle", "imgURL": "http://goo.gl/flHdC6"},
-{"name": "Buster", "address": "432 Donald Road", "breed": "Malamute", "imgURL": "https://goo.gl/Vdlt2c"},
-{"name": "Martin", "address": "434 Bhavesh Road", "breed": "Terrier", "imgURL": "http://goo.gl/P9wWAl"},
-{"name": "Ashley", "address": "438 Ambavadi Road", "breed": "Eskimo", "imgURL": "https://goo.gl/Vdlt2c"},
-{"name": "Gomti", "address": "430 Kapoor Road", "breed": "Cow", "imgURL": "http://goo.gl/RxYqV2"},
-{"name": "Frosty", "address": "338 Tilak Road", "breed": "Boxer", "imgURL": "http://bit.ly/1Iaqrdn"},
-{"name": "Master", "address": "538 Sarkar Road", "breed": "Girffon", "imgURL": "http://bit.ly/1e7jDkl"},
-{"name": "Junior", "address": "138 Parle Road", "breed": "Chihuahua", "imgURL": "https://goo.gl/Vdlt2c"},
-{"name": "Franky", "address": "738 Sagar St", "breed": "Shitsu", "imgURL": "http://bit.ly/1Su0A1q"},
-{"name": "Woofers", "address": "438 Sonia Road", "breed": "Boston Terrier", "imgURL": "http://goo.gl/P9wWAl"},
-{"name": "Leo", "address": "298 Gandhi Road", "breed": "Spitz", "imgURL": "https://goo.gl/Vdlt2c"}
-];
+{
+    "dogs": [
+        {
+            "name": "Kaya",
+            "address": "506 Adriatic Ct",
+            "breed": "German Shepherd",
+            "imgURL": "http://goo.gl/2gj0mo",
+            "latitude": "37.763991",
+            "longitude": "-121.889907"
+        },
+        {
+            "name": "Goldi",
+            "address": "2332 Avalon Way",
+            "breed": "Golden Retriever",
+            "imgURL": "https://goo.gl/3nB2mN",
+            "latitude": "37.758646",
+            "longitude": "-121.885280"
+        },
+        {
+            "name": "Cotton",
+            "address": "2108 Chamomile Ct",
+            "breed": "Spanish Poodle",
+            "imgURL": "http://goo.gl/flHdC6",
+            "latitude": "37.767460",
+            "longitude": "-121.912654"
+        },
+        {
+            "name": "Buster",
+            "address": "101 Treasure Ct",
+            "breed": "Malamute",
+            "imgURL": "https://goo.gl/Vdlt2c",
+            "latitude": "37.777892",
+            "longitude": "-121.987083"
+        },
+        {
+            "name": "Martin",
+            "address": "516 Tylerton Ct",
+            "breed": "Terrier",
+            "imgURL": "http://goo.gl/P9wWAl",
+            "latitude": "37.761234",
+            "longitude": "-121.896234"
+        },
+        {
+            "name": "Ashley",
+            "address": "713 Arboles Pl",
+            "breed": "Eskimo",
+            "imgURL": "https://goo.gl/Vdlt2c",
+            "latitude": "37.748481",
+            "longitude": "-121.939242"
+        },
+        {
+            "name": "Gomti",
+            "address": "112 Radford Ct",
+            "breed": "Cow",
+            "imgURL": "http://goo.gl/RxYqV2",
+            "latitude": "37.756004",
+            "longitude": "-121.935530"
+        },
+        {
+            "name": "Frosty",
+            "address": "2559 Harlow Ln",
+            "breed": "Boxer",
+            "imgURL": "http://bit.ly/1Iaqrdn",
+            "latitude": "37.763991",
+            "longitude": "-121.897673"
+        },
+        {
+            "name": "Master",
+            "address": "274 Eastridge Dr",
+            "breed": "Girffon",
+            "imgURL": "http://bit.ly/1e7jDkl",
+            "latitude": "37.769230",
+            "longitude": "-121.941980"
+        },
+        {
+            "name": "Junior",
+            "address": "7807 Kennard Ln",
+            "breed": "Chihuahua",
+            "imgURL": "https://goo.gl/Vdlt2c",
+            "latitude": "37.747641",
+            "longitude": "-121.886730"
+        },
+        {
+            "name": "Franky",
+            "address": "606 Dromana Ct",
+            "breed": "Shitsu",
+            "imgURL": "http://bit.ly/1Su0A1q",
+            "latitude": "37.761390",
+            "longitude": "-121.897200"
+        },
+        {
+            "name": "Woofers",
+            "address": "2338 Keats Ln",
+            "breed": "Boston Terrier",
+            "imgURL": "http://goo.gl/P9wWAl",
+            "latitude": "37.753768",
+            "longitude": "-121.890899"
+        },
+        {
+            "name": "Leo",
+            "address": "160 Corral Cir",
+            "breed": "Spitz",
+            "imgURL": "https://goo.gl/Vdlt2c",
+            "latitude": "37.762055",
+            "longitude": "-121.983843"
+        }
+    ]
+}

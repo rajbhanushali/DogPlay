@@ -1,0 +1,128 @@
+<h1 class="center">My Information</h1>
+
+  <form class="form-horizontal">
+
+<div class="userinfo">
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="firstname">First
+      Name*</label>
+
+      <div class="col-sm-10">
+        <input class="form-control" ng-model="owner.firstname" id="firstname" placeholder = "First Name" type="text" required />
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="lastname">Last
+      Name*</label>
+
+      <div class="col-sm-10">
+        <input class="form-control" id="lastname" placeholder = "Last Name" ng-model="owner.lastname" type="text" required />
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="email">Email
+      Address*</label>
+
+      <div class="col-sm-10">
+        <input class="form-control" id="email" ng-model="owner.email" placeholder = "Email Address" type="email" required />
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="phone">Phone
+      Number</label>
+
+      <div class="col-sm-10">
+        <input class="form-control" id="phone" placeholder=
+        "Phone Number" type="tel" ng-model="owner.phoneno" required />
+      </div>
+    </div>
+  </div>
+    <div class="center">
+      <input class="btn btn-primary btn-raised" type="submit" ng-click="updateOwner(owner)">
+    </div>
+  </form>
+
+
+
+<div class="container">
+  <hr class="black">
+</div>
+
+
+<h1 class="center">My Dog's Information</h1>
+
+
+<div class="userinfo">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="dogname">Name of
+      Dog*</label>
+
+      <div class="col-sm-10">
+        <input class="form-control" id="dogname" placeholder=
+        "Name of Dog" type="text" ng-model="dog.nayme">
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="breed">Breed*</label>
+
+      <div class="col-sm-10">
+        <input class="form-control" id="breed" placeholder="Breed"
+        type="text" ng-model="dog.breed">
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="age">Age</label>
+
+      <div class="col-sm-10">
+        <input class="form-control" id="age" ng-model="dog.age" placeholder="Age" type=
+        "text">
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="address">Address</label>
+
+      <div class="col-sm-10">
+        <input class="form-control" id="address" placeholder="Address (e.g. 123 Streetname, San Francisco, CA)"
+        type="text" ng-model = "dog.address" required />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="imgurl">Image URL*</label>
+
+      <div class="col-sm-10">
+        <input class="form-control" id="imgurl" placeholder="Link to an image (preferably square)"
+         type="text" ng-model="dog.imgurl">
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for=
+      "dogdesc">Description*</label>
+
+      <div class="col-sm-10">
+        <textarea class="fullwidth" id="dogdesc" rows="5" ng-model="dog.desc">
+        </textarea>
+      </div>
+    </div>
+  </div>
+    <div class="center">
+      <input class="btn btn-primary btn-raised" type="submit" ng-click="updateDog(dog)">
+    </div>
+  </form>
+
+

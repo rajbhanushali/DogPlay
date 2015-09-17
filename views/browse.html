@@ -1,13 +1,14 @@
+
+
 <div class='wrapper'>
 
-<div class="listview" style="float: left;width:30%">
+<div class="listview">
   <ul ng-repeat= 'dog in dogs'>
->>>>>>> b70f64cef66a67f5ad731e67dadc0f10e74890ed
-    <li>
-      <img ng-src="{{dog.IMGURL}}" height=100px width=100px>
-      <h3>{{dog.NAME}}</h3>
-      <p><strong>Address: </strong>{{dog.ADDRESS}}</p>
-      <p><strong>Breed: </strong> {{dog.BREED}}</p>
+    <li data-toggle="modal" data-target="#myModal" data-id="{{dog.dogUID}}">
+      <img ng-src="{{dog.imgURL}}" height=100px width=100px>
+      <h3>{{dog.name}}</h3>
+      <p><strong>Address: </strong>{{dog.address}}</p>
+      <p><strong>Breed: </strong> {{dog.breed}}</p>
     </li>
 
     
@@ -16,9 +17,100 @@
 </div>
 
 <ui-gmap-google-map center="map.center" zoom="map.zoom">
-  <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" click="onClick()" idkey="marker.id">
-      <ui-gmap-window options="windowOptions" closeClick="closeClick()">
-          <div>Hola!</div>
-      </ui-gmap-window>      
-  </ui-gmap-marker>
+  <!--<ui-gmap-markers models="dogs" coords="'self'" >
+
+    <ui-gmap-windows>
+        <div ng-non-bindable>
+          <h3>{{name}}</h3>
+         <div class="col-sm-5"> 
+          <img src="{{imgURL}}" height="100px" width="100px"></div>
+          <div class="col-sm-7">
+            <h4><strong>Address: </strong><br>{{address}}</h2>
+            <button type="button"
+             class="btn btn-primary"
+             data-toggle="modal"
+             data-target="#myModal"
+             data-id="{{id}}">
+
+                Learn More
+
+            </button>
+          </div>
+        </div>
+            
+      </ui-gmap-windows>      
+    </ui-gmap-markers>
+      
+    <ui-gmap-marker ng-repeat="dog in dogs" idKey="dog.dogUID" coords="dog">
+      <script type="text/javascript">console.log("this is executing")</script>
+    </ui-gmap-marker>--> 
+    <!--<ui-gmap-markers models="dogs" coords="'self'">
+      <ui-gmap-window>
+      <h1>H3llo</h1>
+      </ui-gmap-window>
+    </ui-gmap-markers>-->
+    <div ng-repeat="dog in dogs">
+      <ui-gmap-marker idKey="dog" coords="dog">
+        <ui-gmap-window>
+        <div>
+          <h3>{{dog.name}}</h3>
+
+          <div class="col-sm-5"> 
+            <img ng-src="{{dog.imgURL}}" height="100px" width="100px">
+          </div>
+
+          <div class="col-sm-7">
+              <h4><strong>Address: </strong><br>{{dog.address}}</h4>
+              <button 
+              type="button"
+              class="btn btn-primary"
+              data-toggle="modal"
+              data-target="#myModal"
+              data-id="{{dog.dogUID}}">
+
+              Learn More
+
+              </button>
+          </div>
+          </div>
+        </ui-gmap-window>
+      </ui-gmap-marker>
+    </div>
+
+
+
 </ui-gmap-google-map>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="myModalLabel">DOG NAME</h4>
+      </div>
+      <div class="modal-body">
+        <div class="col-sm-6">
+          <img src="" id="dogimage" width="150px" height="150px">
+          <h5><strong>Address</strong></h5>
+          <h5 class="dogaddr">ADDRESS</h5>
+          <hr>
+          <h5><strong>Breed</strong></h5>
+          <h5 class="dogbreed"></h5>
+          <hr>
+          <h5><strong>Email</strong></h5>
+          <h5 class="dogemail"></h5>
+        </div>
+        <div class="col-sm-6">
+            <h4 class="dogdesc">Hello!</h4>
+       </div>  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
