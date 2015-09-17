@@ -1,28 +1,42 @@
-<div class="auth-forms title">
-  <h2>Register</h2>
-  <form ng-submit="register(user)">
-    
-    <div class="input-group">
-      <div class="input-group-addon">
-      	<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-      </div>
-      <input type="name" ng-model="user.name" placeholder="Name" class="form-control" autofocus required>
-    </div><br>
-    
-    <div class="input-group">
-      <div class="input-group-addon">
-      	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-      </div>
-      <input type="email" ng-model="user.email" placeholder="Email" class="form-control" required>
-    </div><br>
 
-    <div class="input-group">
-      <div class="input-group-addon">
-      	<span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
-      </div>
-      <input type="password" ng-model="user.password" placeholder="Password" class="form-control" required>
-    </div><br>   
-    
-    <input type="submit" value="Register" class="btn btn-danger">
-  </form>
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+<div class="jethalal">
+<div class="login">
+    <div class="login-top">
+        <h2>Sign Up</h2>
+    </div>
+    <div class="login-bottom">
+        
+        
+        <h3>Sign up with your email and password:</h3>
+       <form>
+       <div class="user">
+            <input type="text" placeholder="First Name" ng-model="user.firstname" onfocus="this.placeholder = '';" onblur="if (this.placeholder == '') {this.placeholder = 'First Name';}">
+            <i></i>
+        </div>
+        <div class="user">
+            <input type="text" placeholder="Last Name" ng-model="user.lastname" onfocus="this.placeholder = '';" onblur="if (this.placeholder == '') {this.placeholder = 'Last Name';}">
+            <i></i>
+        </div>
+        <div class="user-email">
+            <input type="text" ng-model="user.email" placeholder="Email Address" onfocus="this.placeholder = '';" onblur="if (this.placeholder == '') {this.placeholder = 'Email Address';}">
+            <i></i>
+        </div>
+        <div class="user-in">
+            <input type="password" placeholder="Password" ng-model="user.password" onfocus="this.placeholder = '';" onblur="if (this.placeholder == '') {this.placeholder = 'Password';}">
+            <i></i>
+        </div>
+
+
+      </form>
+
+        <div class="keep-loginbutton">
+          <form>
+            <input type="submit" ng-click="createUser(user)" value="Sign Up" />
+         </form>
+        </div>
+
+        <div class="clear"> </div>
+    </div>
+</div>
 </div>

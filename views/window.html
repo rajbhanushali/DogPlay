@@ -1,0 +1,18 @@
+<h3>{{dog.name}}</h3>
+
+        <div class="col-sm-5"> 
+          <img ng-src="{{dog.imgURL}}" height="100px" width="100px">
+        </div>
+
+          <div class="col-sm-7">
+            <h4><strong>Address: </strong><br>{{dog.address}}</h2>
+            <button type="button"
+             class="btn btn-primary"
+             data-toggle="modal"
+             data-target="#myModal"
+             data-id="{{dog.dogUID}}">
+
+                Learn More
+
+            </button>
+          </div>

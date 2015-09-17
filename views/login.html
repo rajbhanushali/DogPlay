@@ -1,21 +1,45 @@
-<div class="auth-forms title">
-  <h2>Login</h2>
-  <form ng-submit="login(user)">
-  
-    <div class="input-group">
-      <div class="input-group-addon">
-      	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-      </div>
-      <input type="email" ng-model="user.email" placeholder="Email" class="form-control" autofocus required>
-    </div><br>
 
-    <div class="input-group">
-      <div class="input-group-addon">
-      	<span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+<div class="jethalal">
+<div class="login">
+    <div class="login-top">
+        <h2>Login</h2>
+    </div>
+    <div class="login-bottom">
+        <h3>Log in with a social network:</h3>
+        <ul>
+            <li><a class="tw" href="#" ng-click="googleAuth()">Connect with Google+</a></li>
+            <li><a class="fa" href="#" ng-click="facebookAuth()">Login with Facebook</a></li>
+            <div class="clear"> </div>
+        </ul>
+        
+        <h3>Log in with your email and password:</h3>
+       <form>
+       <div class="user">
+            <input type="text" placeholder="Email" ng-model="user.email" onfocus="this.placeholder = '';" onblur="if (this.placeholder == '') {this.placeholder = 'Email';}">
+            <i></i>
+        </div>
+        <div class="user-in">
+            <input type="password" placeholder="Password"  ng-model= "user.password" onfocus="this.placeholder = '';" onblur="if (this.placeholder == '') {this.placeholder = 'Password';}">
+            <i></i>
+        </div>
+      </form>
+      <div class="keepme">
+        <label class="checkbox"><input type="checkbox" name="checkbox" checked><i> </i> Keep me signed in</label>
+        <div class="keep-loginbutton">
+          <form>
+            <input type="submit" ng-click="loginUser(user)" value="Log in" />
+         </form>
+        </div>
+        <div class="clear"> </div>
       </div>
-      <input type="password" ng-model="user.password" placeholder="Password" class="form-control" required>
-    </div><br> 
-
-    <input type="submit" value="Login" class="btn btn-info">
-  </form>
+      <div class="forgot">
+            <p><a href="#">Forgotten your Password?</a></p>
+        <div class="forgot-register">
+            <p>Don't have an account? <a href="#/signup">Register Now</a></p>
+        </div>
+        <div class="clear"> </div>
+      </div>
+    </div>
+</div>
 </div>

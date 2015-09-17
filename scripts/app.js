@@ -8,7 +8,9 @@ var app = angular
     'toaster',
     'angularMoment',
     'toaster',
-    'uiGmapgoogle-maps'
+    'uiGmapgoogle-maps',
+    'firebase',
+    'routeStyles'
   ])
 
   // .run(function($rootScope, $location) {
@@ -19,22 +21,31 @@ var app = angular
   //   });
   // })  
   .config(function ($routeProvider, uiGmapGoogleMapApiProvider) {
-    $routeProvider      
+    $routeProvider
+    .when('/signup', {
+        templateUrl: '../views/signup.html',
+        css: '../styles/signup.css',
+        controller: 'SignupController'
+      })      
       .when('/', {
-        templateUrl: 'views/browse.html',
-        controller: 'BrowseController'     
-      })
-      .when('/browse/:petId', {
-        templateUrl: 'views/browse.html',
+        templateUrl: '../views/browse.html',
         controller: 'BrowseController'
       })
-      .when('/signup', {
-        templateUrl: 'views/signup.html',
-        controller: 'AuthController'
-      })
+      //.when('/browse/:petId', {
+       // templateUrl: 'views/browse.html',
+        //controller: 'BrowseController'
+      //})
+      
       .when('/login', {
-        templateUrl: 'views/login.html',
-        controller: 'AuthController'
+        templateUrl: '../views/login.html',
+        controller: 'LoginController',
+        css: '../styles/login.css'
+      })
+
+      .when('/profile', {
+        templateUrl: '../views/profile.html',
+        controller: 'ProfileController',
+        css: '../styles/profile.css'
       })
       
       .otherwise({
