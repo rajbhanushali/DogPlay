@@ -72,9 +72,16 @@ $scope.facebookAuth = function(){
         console.log("Login Failed!", error);
     } else {
         console.log("Authenticated successfully with payload:", authData);
+        
+        $rootScope.logname = "Logged in as " + authData.facebook.cachedUserProfile.first_name;
+        sharedProperties.setfname(authData.facebook.cachedUserProfile.first_name);
+        sharedProperties.setlname(authData.facebook.cachedUserProfile.last_name);
+
         if(authData.facebook.email){
             sharedProperties.setemail(authData.facebook.email);
             ref.child("users/" + authData.uid).update({
+                firstname: sharedProperties.getfname(),
+                lastname: sharedProperties.getlname(),
                 email: authData.facebook.email
             });
         }
@@ -83,10 +90,7 @@ $scope.facebookAuth = function(){
             firstname: sharedProperties.getfname(),
             lastname: sharedProperties.getlname()
         });
-        $rootScope.logname = "Logged in as " + authData.facebook.cachedUserProfile.first_name;
-        sharedProperties.setfname(authData.facebook.cachedUserProfile.first_name);
-        sharedProperties.setlname(authData.facebook.cachedUserProfile.last_name);
-         }
+                 }
         sharedProperties.setUID(authData.uid);
         window.location.replace("#/profile");
     }
